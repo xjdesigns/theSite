@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family:arial, helvetica, sans serif;
+	font-size:12px;
+	line-height:1.2em;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	line-height:1.6em;
+	letter-spacing:.6em;
+}
+
+.nav {
+	width:99%;
+	height:50px;
+	background:rgba(255,255,255,.7);
+	margin:0 auto;
+	padding:1% 0 0 1%;
+	position:absolute;
+	top:0;
+	bottom:95%;
+	z-index:1;
+	box-shadow:0px 0px 5px #000;
+}
+.nav-white {
+	color:#000;
+}
+
+.menu {
+	width:70%;
+	margin:0 auto;
+	cursor:pointer;
+}
+.logo {
+	width:20%;
+	float:left;
+}
+.nav-buttons {
+	width:150px;
+	float:right;
+	margin:1% 0 0 0;
+	text-align:right;
+}
+.nav-buttons ul {
+	width:150px;
+	height:0;
+	overflow:hidden;
+		transition:height 2s;
+		-webkit-transition:height 2s;
+		-moz-transition:height 2s;
+		-ms-transition:height 2s;
+}
+.nav-buttons ul > li {
+	padding:10% 10% 10% 10%;
+	width:80%;
+	list-style:none;
+	border-bottom:1px solid rgba(0,0,0,0.5);
+	font-size:12px;
+	box-shadow:1px 1px 10px rgba(0,0,0,1.0);
+	color:rgba(255,255,255,.8);
+		background: -webkit-linear-gradient(top,rgba(10,10,10,.9),rgba(0,0,0,.9)); /*Safari 5.1-6*/
+		background: -o-linear-gradient(top,rgba(10,10,10,.9),rgba(0,0,0,.9)); /*Opera 11.1-12*/
+		background: -moz-linear-gradient(top,rgba(10,10,10,.9),rgba(0,0,0,.9)); /*Fx 3.6-15*/
+		background: linear-gradient(top,rgba(10,10,10,.9),rgba(0,0,0,.9)); /*Standard*/
+
+}
+.nav-buttons:hover ul {
+	height:200px;
+		transition:height 2s;
+		-webkit-transition:height 2s;
+		-moz-transition:height 2s;
+		-ms-transition:height 2s;
+}
+.nav-buttons li:hover {
+	background:rgba(0,0,0,1.0);
+	color:rgba(255,255,255,1.0);
+}
+
+.header {
+	width:100%;
+	height:100%;
+}
+.headbtnleft {
+	width:40px;
+	height:100px;
+	position:absolute;
+	top:150px;
+	left:0;
+	background:rgba(0,0,0,0.5);
+	font-size:40px;
+	color:rgba(255,255,255,0.8);
+	padding:70px 0 0 10px;
+	z-index:1;
+	opacity:0;
+		transition:opacity 1.5s;
+		-webkit-transition:opacity 1.5s;
+		-moz-transition:opacity 1.5s;
+		-ms-transition:opacity 1.5s;
+}
+.headbtnright {
+	width:40px;
+	height:100px;
+	position:absolute;
+	top:150px;
+	right:0;
+	background:rgba(0,0,0,0.5);
+	font-size:40px;
+	color:rgba(255,255,255,0.8);
+	padding:70px 0 0 10px;
+	z-index:1;
+	opacity:0;
+		transition:opacity 1.5s;
+		-webkit-transition:opacity 1.5s;
+		-moz-transition:opacity 1.5s;
+		-ms-transition:opacity 1.5s;
+}
+.header:hover > .headbtnleft, .header:hover > .headbtnright {
+	opacity:1.0;
+		transition:opacity 1.5s;
+		-webkit-transition:opacity 1.5s;
+		-moz-transition:opacity 1.5s;
+		-ms-transition:opacity 1.5s;
+}
+.headbtnright:hover > img, .headbtnleft:hover > img {
+	opacity:0.3;
+}
+
+.footer {
+	width:100%;
+	height:150px;
+	margin:2% 0 0 0;
+	background:rgba(0,0,0,0.9);
+	color:rgba(255,255,255,1.0);
+}
+
+/* container is set to hold contents*/
+.container {
+	width:60%;
+	height:auto;
+	margin:0 auto;
+	padding:5% 0 0 0;
+}
+/* clears the float */
+.clearall {
+	clear:both;
+}
+
+.row:before, .row:after {
+	display: table;
+	content: " ";
+}
+.row:after {
+	clear:both
+}
+.col-2-xj, .col-3-xj, .col-4-xj, .col-5-xj, .col-6-xj, .col-12-xj {
+	float:left;
+}
+.col-2-xj {
+	width:50%;
+}
+.col-3-xj {
+	width:33.3%;
+}
+.col-4-xj {
+	width:25%;
+}
+.col-5-xj {
+	width:20%;
+}
+col-6-xj {
+	width:16.6%;
+}
+.col-12-xj {
+	width:100%;
+}
+
+.col-center {
+	text-align:center;
+}
+
+.panel {
+	margin:2% 0 0 0;
+	width:94%;
+	padding:2%;
+	box-shadow:1px 1px 2px rgba(0,0,0,0.1);
+	border-radius:10px;
+	border:1px solid rgba(200,200,200,1.0);
+}
+
+
+/* styles added or parallax scroll */
+.parallax_scroll {
+	margin-top:150px;
+}
+
+.bg1 {
+  background: url(../images/parallax/jason04.jpg) 50% 0 repeat fixed;
+}
+.bg2 {
+  background: url(../images/parallax/jason01.jpg) 50% 0 repeat fixed;
+}
+.bg3 {
+  background: url(../images/parallax/jason03.jpg) 50% 0 repeat fixed;
+}
+
+#about {
+  min-height:300px;
+  height: 300px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+ 
+#about article {
+  height: 150px;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 100%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size:80px;
+  color:white;
+  text-shadow:1px 1px 1px #000;
+}
+
+/* end of the parallax styles */
+
+.section {        width:540px; height:500px;
+                  background:url(../images/bg_freext.png) no-repeat #fff; }
+.section .inner { width:540px; height:500px;
+                  background:url(../images/fg_freext.png) no-repeat; }
