@@ -45,10 +45,6 @@ $( document ).ready(function() {
 		$bgobj.css({ backgroundPosition: coords });
 		});
 	});
-	
-	
-
-
 // end of plug in code	
 
 
