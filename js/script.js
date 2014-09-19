@@ -41,18 +41,7 @@ $( document ).ready(function() {
 // end of plug in code 
  
     
-// this is added for locking an element after it scrolls beyong the offset and locks with fixed    
-    var t = $("#title-anchor").offset().top;
-    var titleS = { 'position' : 'fixed', 'top' : '90px'};
 
-    $(document).scroll(function(){
-        if($(this).scrollTop() > t)
-        {   
-            $( '.titleSec' ).css( titleS );
-        } else {
-            $( '.titleSec' ).css( 'position', '');
-        }
-    });
 	
 	
 	
@@ -86,7 +75,18 @@ $( document ).ready(function() {
 	});
 // end button functions
 
+// this is added for locking an element after it scrolls beyong the offset and locks with fixed    
+    var title  = $( "#title-anchor" ).offset().top;
+    var titleS = { 'position' : 'fixed', 'top' : '90px'};
 
+    $(document).scroll(function(){
+        if($(this).scrollTop() > title)
+        {   
+            $( '.titleSec' ).css( titleS );
+        } else {
+            $( '.titleSec' ).css( 'position', '');
+        }
+    });
 	
 
 
