@@ -21,6 +21,20 @@ $( document ).ready(function() {
         $( '#workDesc' ).load( 'ajaxWork.html #amwBOFDesc' );
         $( '.header' ).load( 'ajaxWork.html #amwHead' );
     });
+    
+    
+// this is added for locking an element after it scrolls beyong the offset and locks with fixed    
+    var t = $("#title-anchor").offset().top;
+    var titleS = { 'position' : 'fixed', 'top' : '90px'};
+
+    $(document).scroll(function(){
+        if($(this).scrollTop() > t)
+        {   
+            $( '.titleSec' ).css( titleS );
+        } else {
+            $( '.titleSec' ).css( 'position', '');
+        }
+    });
 	
 	
 	
