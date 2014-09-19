@@ -25,6 +25,10 @@ p {
     margin-top:10px;
 }
 
+img a {
+	border-style:none;
+}
+
 ul.skills > li {
     list-style:square;
     text-align:left;
