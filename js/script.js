@@ -21,6 +21,12 @@ $( document ).ready(function() {
         $( '#workDesc' ).load( 'ajaxWork.html #amwBOFDesc' );
         $( '.header' ).load( 'ajaxWork.html #amwHead' );
     });
+	
+	$( '#amwPTCH' ).click(function() {
+        $( '#workImg' ).load( 'ajaxWork.html #amwPTCHImg' );
+        $( '#workDesc' ).load( 'ajaxWork.html #amwPTCHDesc' );
+        $( '.header' ).load( 'ajaxWork.html #amwHeadPTCH' );
+    });
     
  
 	var $window = $(window); //You forgot this line in the above example
@@ -82,9 +88,9 @@ $( document ).ready(function() {
     $(document).scroll(function(){
         if($(this).scrollTop() > title)
         {   
-            $( '.titleSec' ).css( titleS );
+            $( '.portMenu' ).css( titleS );
         } else {
-            $( '.titleSec' ).css( 'position', '');
+            $( '.portMenu' ).css( 'position', '');
         }
     });
 	
