@@ -20,6 +20,9 @@ h1, h2, h3, h4, h5 {
     font-family:'Raleway', helvetica, sans serif;
     font-weight:400;
 }
+#about article > h5 {
+	font-size:18px;
+}
 
 p {
     margin-top:10px;
@@ -360,10 +363,10 @@ ul.proj > li {
   background: url(../images/parallax/jason04.jpg) 50% 0 no-repeat fixed;
 }
 .bg2 {
-  background: url(../images/parallax/jason01.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/parallax/parallaxCodeView.jpg) 50% 0 no-repeat fixed;
 }
 .bg3 {
-  background: url(../images/parallax/jason03.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/parallax/parallaxCreative.jpg) 50% 0 no-repeat fixed;
 }
 
 #about {
@@ -383,13 +386,32 @@ ul.proj > li {
   width: 100%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size:80px;
-  color:white;
-  text-shadow:1px 1px 1px #000;
+  text-shadow:1px 1px 1px rgba(0,0,0,1.0);
+  color:rgba(220,220,220,1.0);
+}
+.abouttop300 {
+	top:300px !important;
+	font-size:50px !important;
+}
+.abouttop500 {
+	top:500px !important;
 }
 
 /* end of the parallax styles */
 
 /* media queries for resonsive design */
+@media screen and (max-width: 1500px), screen and (max-device-width: 1500px) {
+    .headbtnleft, .headbtnright {
+        top:120px;
+    }
+}
+@media screen and (max-width: 1250px), screen and (max-device-width: 1250px) {
+    .headbtnleft, .headbtnright {
+        top:90px;
+		height:120px;
+    }
+}
+
 @media screen and (max-width: 1050px), screen and (max-device-width: 1050px) {
     .port01, .port02, .port03, .port04, .port05 {
         background-size:auto 100%;

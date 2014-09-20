@@ -27,6 +27,18 @@ $( document ).ready(function() {
         $( '#workDesc' ).load( 'ajaxWork.html #amwPTCHDesc' );
         $( '.header' ).load( 'ajaxWork.html #amwHeadPTCH' );
     });
+	
+	$( '#kaoCA' ).click(function() {
+        $( '#workImg' ).load( 'ajaxWork.html #kaoCAImg' );
+        $( '#workDesc' ).load( 'ajaxWork.html #kaoCADesc' );
+        $( '.header' ).load( 'ajaxWork.html #kaoHeadCA' );
+    });
+	
+	$( '#gannett' ).click(function() {
+        $( '#workImg' ).load( 'ajaxWork.html #gannettImg' );
+        $( '#workDesc' ).load( 'ajaxWork.html #gannettDesc' );
+        $( '.header' ).load( 'ajaxWork.html #gannettHead' );
+    });
     
  
 	var $window = $(window); //You forgot this line in the above example
@@ -52,7 +64,7 @@ $( document ).ready(function() {
 	
 	
 	
-	var headimg = ['cod.jpg' , 'amw_bf.jpg' , 'main01.jpg' , 'amw_pc.jpg'];
+	var headimg = ['cod.jpg' , 'amw_bf.jpg' , 'main01.jpg' , 'amw_pc.jpg' , 'amw_vid.jpg' , 'photomain.jpg'];
 	var indexnum = 0;
 	var headPath = 'images/bg/';
 // function for slider buttons	
@@ -63,7 +75,7 @@ $( document ).ready(function() {
 			$( '#headImg' ).attr( 'src', headPath + headimg[indexnum]); // indexnum is array, for headimg variable array passing
 				
 			indexnum++; // increase by 1
-			if(indexnum > 3) {indexnum = 0} // if indexnum is greater than 3, next number is 0
+			if(indexnum > 5) {indexnum = 0} // if indexnum is greater than 3, next number is 0
 			$( '#headImg' ).fadeIn(500);
 		});
 	});
@@ -75,7 +87,7 @@ $( document ).ready(function() {
 			$( '#headImg' ).attr( 'src', headPath + headimg[indexnum]); // indexnum is array, for headimg variable array passing
 					
 			indexnum--; // decrease by 1
-			if(indexnum < 0) {indexnum = 3} // if indexnum is less than 3, next number is 0
+			if(indexnum < 0) {indexnum = 5} // if indexnum is less than 3, next number is 0
 			$( '#headImg' ).fadeIn(500);
 		});
 	});
@@ -83,14 +95,15 @@ $( document ).ready(function() {
 
 // this is added for locking an element after it scrolls beyong the offset and locks with fixed    
     var title  = $( "#title-anchor" ).offset().top;
-    var titleS = { 'position' : 'fixed', 'top' : '90px'};
+    var titleS = { 'position' : 'fixed', 'top' : '90px', 'width' : '60%'};
+	var titleT = { 'position' : '', 'top' : '', 'width' : ''};
 
     $(document).scroll(function(){
         if($(this).scrollTop() > title)
         {   
             $( '.portMenu' ).css( titleS );
         } else {
-            $( '.portMenu' ).css( 'position', '');
+            $( '.portMenu' ).css( titleT );
         }
     });
 	
