@@ -266,26 +266,17 @@ ul.proj > li {
 
 .portfolioMain > div {
     width:96%;
-    height:0;
+    height:62px;
     overflow:hidden;
-    padding:0 2%;
+    padding:2%;
     position:relative;
-    top:60%;
+    top:55%;
     background:rgba(0,0,0,0.5);
-    color:rgba(255,255,255,1.0);
-        transition:height 1s, padding 1s, top 1s;
-        -moz-transition:height 1s, padding 1s, top 1s;
-        -webkit-transition:height 1s, padding 1s;
-        -ms-transition:height 1s, padding 1s;
 }
 .portfolioMain:hover > div {
     height:62px;
     top:55%;
     padding:2%;
-        transition:height 1s, padding 1s;
-        -moz-transition:height 1s, padding 1s;
-        -webkit-transition:height 1s, padding 1s;
-        -ms-transition:height 1s, padding 1s;
 }
 .portfolioMain div > p {
     font-family:'Raleway', helvetica, sans serif;
@@ -313,6 +304,10 @@ ul.proj > li {
 }
 .port05 {
     background:rgba(0,0,0,0.1) url(../images/port05.jpg) no-repeat center;
+    background-size:100% auto;
+}
+.port06 {
+    background:rgba(0,0,0,0.1) url(../images/port06.jpg) no-repeat center;
     background-size:100% auto;
 }
 
@@ -490,8 +485,23 @@ ul.proj > li {
     }
     .panel {
         width:98%;
-        padding-left:2%;
+        padding-left:6%;
+		margin:5% 0;
     }
+	.bg1, .bg2, .bg3 {
+		background-attachment:scroll;
+	}
+	#ftimg {
+		width:30%;
+	}
+	#workImg > img {
+		width:100%;
+	}
+	ul.skills > li {
+		list-style:square;
+		text-align:left;
+		margin-left:10%;
+	}
 }
 
 

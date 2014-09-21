@@ -39,8 +39,16 @@ $( document ).ready(function() {
         $( '#workDesc' ).load( 'ajaxWork.html #gannettDesc' );
         $( '.header' ).load( 'ajaxWork.html #gannettHead' );
     });
+	
+	$( '#mVideo' ).click(function() {
+        $( '#workImg' ).load( 'ajaxWork.html #mVideoImg' );
+        $( '#workDesc' ).load( 'ajaxWork.html #mVideoDesc' );
+        $( '.header' ).load( 'ajaxWork.html #mVideoHead' );
+    });
     
- 
+
+	
+	
 	var $window = $(window); //You forgot this line in the above example
 
 	$('section[data-type="background"]').each(function(){
@@ -54,9 +62,8 @@ $( document ).ready(function() {
 		// Move the background
 		$bgobj.css({ backgroundPosition: coords });
 		});
-	});
-	
-// end of plug in code 
+	}); 
+
  
     
 
@@ -93,6 +100,7 @@ $( document ).ready(function() {
 	});
 // end button functions
 
+
 // this is added for locking an element after it scrolls beyong the offset and locks with fixed    
     var title  = $( "#title-anchor" ).offset().top;
     var titleS = { 'position' : 'fixed', 'top' : '90px', 'width' : '60%'};
@@ -106,6 +114,7 @@ $( document ).ready(function() {
             $( '.portMenu' ).css( titleT );
         }
     });
+
 	
 
 
