@@ -421,7 +421,6 @@ ul.proj > li {
         width:100%;
     }
     .port01, .port02, .port03, .port04, .port05 {
-        background:rgba(0,0,0,0.1) url(../images/port01x.jpg) no-repeat center top;
         background-size:100% auto;
     }
 }
