@@ -41,28 +41,28 @@ $( document ).ready(function() {
     });
 	
 	$( '#mVideo' ).click(function() {
-        $( '#workImg' ).load( 'ajaxWork.html #mVideoImg' );
+        $( '#workImg' ).load( 'ajaxWork.html #mVideoVid' );
         $( '#workDesc' ).load( 'ajaxWork.html #mVideoDesc' );
         $( '.header' ).load( 'ajaxWork.html #mVideoHead' );
     });
     
 
 	
-	
-	var $window = $(window); //You forgot this line in the above example
+	// commented out due to conflicts with apple iOS safari
+//	var $window = $(window); //You forgot this line in the above example
 
-	$('section[data-type="background"]').each(function(){
-	var $bgobj = $(this); // assigning the object
-		$(window).scroll(function() {
-		// Scroll the background at var speed
-		// the yPos is a negative value because we're scrolling it UP!
-		var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
-		// Put together our final background position
-		var coords = '50% '+ yPos + 'px';
-		// Move the background
-		$bgobj.css({ backgroundPosition: coords });
-		});
-	}); 
+//	$('section[data-type="background"]').each(function(){
+//	var $bgobj = $(this); // assigning the object
+//		$(window).scroll(function() {
+//		// Scroll the background at var speed
+//		// the yPos is a negative value because we're scrolling it UP!
+//		var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+//		// Put together our final background position
+//		var coords = '50% '+ yPos + 'px';
+//		// Move the background
+//		$bgobj.css({ backgroundPosition: coords });
+//		});
+//	}); 
 
  
     

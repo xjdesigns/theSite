@@ -355,13 +355,13 @@ ul.proj > li {
 }
 
 .bg1 {
-  background: url(../images/parallax/jason04.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/parallax/jason04.jpg) 50% 0 no-repeat;
 }
 .bg2 {
-  background: url(../images/parallax/parallaxCodeView.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/parallax/parallaxCodeView.jpg) 50% 0 no-repeat;
 }
 .bg3 {
-  background: url(../images/parallax/parallaxCreative.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/parallax/parallaxCreative.jpg) 50% 0 no-repeat;
 }
 
 #about {
@@ -374,22 +374,26 @@ ul.proj > li {
 }
  
 #about article {
-  height: 150px;
+  height: auto;
   position: absolute;
   text-align: center;
   top: 150px;
   width: 100%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size:80px;
+  padding-bottom:2%;
   text-shadow:1px 1px 1px rgba(0,0,0,1.0);
-  color:rgba(220,220,220,1.0);
+  color:rgba(255,255,255,1.0);
+  background:rgba(0,0,0,0.5);
+  box-shadow:inset 0px 0px 3px rgba(0,0,0,1.0); 
 }
 .abouttop300 {
 	top:300px !important;
 	font-size:50px !important;
+	padding-top:35px;
 }
-.abouttop500 {
-	top:500px !important;
+.abouttop200 {
+	top:200px !important;
 }
 
 /* end of the parallax styles */
@@ -417,18 +421,26 @@ ul.proj > li {
     .col-3-jj {
         width:100%;
     }
-    .col-6-jj {
-        width:100%;
-    }
     .port01, .port02, .port03, .port04, .port05 {
         background-size:100% auto;
     }
+    .panel {
+        width:96%;
+        padding-left:4%;
+	}
+	.menu, .container {
+		width:80%;
+	}
+		
 }
 
 @media screen and (max-width: 480px), screen and (max-device-width: 480px) {
     .nav {
         position:fixed;
     }
+	.col-6-jj {
+		width:100%;
+	}
     .container {
         width:80%;
     }
@@ -483,7 +495,7 @@ ul.proj > li {
         opacity:1.0;
     }
     .panel {
-        width:98%;
+        width:92%;
         padding-left:6%;
 		margin:5% 0;
     }
