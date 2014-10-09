@@ -11,12 +11,12 @@
 
 </head>
 
-<body>
+<body data-start='height:100%;' data-end='height:100%;'>
 
 <nav class="nav">
     <div class="menu">
         <div class="logo">
-        	<a href="index.html">
+            <a href="index.html">
             <span style="font-size:35px; font-weight:400;">XJD</span>
             <br>
             JASON<span class="vividBlue">JACOBSON</span>DESIGNS
@@ -28,22 +28,44 @@
         <ul id="menu">
             <a href="about.html"><li>ABOUT</li></a>
             <a href="/AngularJSBooted/index.html"><li>AngularJS</li></a>
-            <a href="#/work"><li>WORK</li></a>
-            <a href="#/skills"><li>SKILLS</li></a>
+            <a href="index.html#/work"><li>WORK</li></a>
+            <a href="index.html#/skills"><li>SKILLS</li></a>
         </ul>
         </div>
     </div>
 </nav>
 
+<!-- nav links above return index.html before paths to return to the controller -->
+<!-- about.html is new template without ng-view, due to conflict on height and return errors of skrollr -->
+<!-- for more skrollr info visit https://github.com/Prinzhorn/skrollr, credit goes to this genius -->
+
+<div class="parallax_scroll" id="skrollr-body">
+
+    <section id="about" class="bg1" skrollr data-0="height:100%;" data-300="height:0px">
+         <article skrollr data-0="top:45%;" data-200="top:-5%;">
+         MY NAME IS JASON
+         <h5 skrollr data-0="opacity:0;" data-10="opacity:1;">(I also go by JBRA or JMAN)</h5>
+         </article>
+	</section>
+    
+    <section id="about" class="bg4" skrollr data-300="height:100%;" data-600="height:0px;">
+         <article class="about300" skrollr data-0="top:30%; left:-100%;" data-250="top:50%; left:0%;">
+         I AM A FRONT-END WEB DESIGNER / DEVELOPER
+         <h5>with strong knowledge and focus on responsive design</h5>
+         </article>
+	</section>
+    
+    <section id="about" class="bg3" skrollr data-600="height:100%;" data-900="height:0px;">
+         <article class="about200" skrollr data-250="top:95%;" data-450="top:45%;">
+         <div skrollr data-250="font-size:0px;" data-550="font-size:100px;">AND LOVE TO BE CREATIVE</div>
+         <h5>while pushing the limits of what I can achieve</h5>
+         </article>
+	</section>
+    
+</div>
 
 
-<div ng-view></div>
-
-
-
-
-
-<div class="footer">
+<!-- <div class="footer">
 
     <div class="container">
     
@@ -60,7 +82,7 @@
     
     </div>
 
-</div>
+</div> -->
 
 
 
@@ -76,3 +98,7 @@
 
 </body>
 </html>
+
+
+
+

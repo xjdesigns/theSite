@@ -5,6 +5,12 @@
     padding:0;
     margin:0;
 }
+
+html, body {
+    width:100%;
+    height:100%;
+}
+
 body {
     font-family:arial, helvetica, sans serif;
     font-size:12px;
@@ -225,6 +231,12 @@ ul.proj > li {
     -ms-transition:background 1s;   
 }
 
+ul.skills > li {
+    list-style:square;
+    text-align:left;
+    margin-left:20%;
+}
+
 .container {
     width:60%;
     height:auto;
@@ -256,7 +268,7 @@ ul.proj > li {
 .footer {
     width:100%;
     font-family:'Raleway', arial, helvetica, sans serif;
-    background:rgba(0,0,0,0.2);    
+    background:rgba(0,0,0,0.2);
     background: -webkit-linear-gradient(top, rgba(220,220,220,.5), rgba(240,240,240,.5));
     background: -moz-linear-gradient(top, rgba(220,220,220,.5), rgba(240,240,240,.5));
     background: -o-linear-gradient(top, rgba(220,220,220,.5), rgba(240,240,240,.5));
@@ -295,9 +307,12 @@ ul.proj > li {
     margin:0 0 3px 0;
     text-shadow:1px 1px 2px rgba(0,0,0,0.5)
 }
-
+.port00 {
+    background:rgba(0,0,0,0.1) url(../images/port00.jpg) no-repeat center;
+    background-size:100% auto;
+}
 .port01 {
-    background:rgba(0,0,0,0.1) url(../images/port01x.jpg) no-repeat center;
+    background:rgba(0,0,0,0.1) url(../images/port01.jpg) no-repeat center;
     background-size:100% auto;
 }
 .port02 {
@@ -318,6 +333,13 @@ ul.proj > li {
 }
 .port06 {
     background:rgba(0,0,0,0.1) url(../images/port06.jpg) no-repeat center;
+    background-size:100% auto;
+}
+.portBOOTED {
+    background: linear-gradient:(top, rgba(46,157,220,1.0), rgba(116,212,255,1.0));
+    background: -webkit-linear-gradient(top, rgba(46,157,220,1.0), rgba(116,212,255,1.0));
+    background: -moz-linear-gradient(top, rgba(46,157,220,1.0), rgba(166,212,255,1.0));
+    background: -ms-linear-gradient(top, rgba(46,157,220,1.0), rgba(116,212,255,1.0));
     background-size:100% auto;
 }
 
@@ -362,21 +384,97 @@ ul.proj > li {
 /* styles added or parallax scroll */
 .parallax_scroll {
 	margin-top:0px;
+    width:100%;
+    height:100%;
+}
+section {
+    overflow-x:hidden;
+}
+.homeSlide {
+    width:100%;
+    height:100%;
+}
+.bcps {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.psc {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.pscontent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center
 }
 
+
+
+
+#slide1 .bcps {
+    background-image:url(../images/parallax/jason04.jpg);
+}
+ 
+
+#slide2 .bcps {
+    background:none;
+    background-color:rgba(0,0,0,1);
+    height:310px;
+    text-align:center;
+}
+
+#slide3 .bcps {
+    background-image:url(../images/skrollr/Jcreative.jpg);
+}
+
+#slide4 .bcps {
+    background-image:url(../images/skrollr/Jstorm.jpg);
+}
+
+#slide5 .bcps {
+    background:none;
+    background-color:rgba(0,0,0,1);
+    height:310px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+
 .bg1 {
-  background: url(../images/parallax/jason04.jpg) 50% 0 no-repeat;
+  background: url(../images/parallax/jason04.jpg) no-repeat 50% 0;
 }
 .bg2 {
-  background: url(../images/parallax/parallaxCodeView.jpg) 50% 0 no-repeat;
+  background: url(../images/parallax/parallaxCodeView.jpg) no-repeat 50% 0;
 }
 .bg3 {
-  background: url(../images/parallax/parallaxCreative.jpg) 50% 0 no-repeat;
+  background: url(../images/parallax/parallaxCreative.jpg) no-repeat 50% 0;
+}
+.bg4 {
+  background: url(../images/skrollr/Jcode.jpg) no-repeat 50% 0;
+}
+
+.bg1, .bg2, .bg3, .bg4 {
+    background-size:cover;
 }
 
 #about {
-  min-height:1000px;
-  height: 1000px;
   margin: 0 auto;
   width: 100%;
   max-width: 2560px;
@@ -387,7 +485,6 @@ ul.proj > li {
   height: auto;
   position: absolute;
   text-align: center;
-  top: 150px;
   width: 100%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size:80px;
@@ -397,13 +494,11 @@ ul.proj > li {
   background:rgba(0,0,0,0.5);
   box-shadow:inset 0px 0px 3px rgba(0,0,0,1.0); 
 }
-.abouttop300 {
-	top:300px !important;
+.about300 {
 	font-size:50px !important;
 	padding-top:35px;
 }
-.abouttop200 {
-	top:200px !important;
+.about200 {
 }
 
 /* end of the parallax styles */
@@ -419,6 +514,11 @@ ul.proj > li {
         top:90px;
 		height:120px;
     }
+    ul.skills > li {
+        list-style:square;
+        text-align:left;
+        margin-left:25px;
+    }
 }
 
 @media screen and (max-width: 1050px), screen and (max-device-width: 1050px) {
@@ -428,9 +528,6 @@ ul.proj > li {
 }
 
 @media screen and (max-width: 769px), screen and (max-device-width: 769px) {
-    .col-3-jj {
-        width:100%;
-    }
     .port01, .port02, .port03, .port04, .port05 {
         background-size:100% auto;
     }
@@ -441,12 +538,32 @@ ul.proj > li {
 	.menu, .container {
 		width:80%;
 	}
+    .headbtnleft, .headbtnright {
+        height:70px;
+        padding-top:30px;
+        top:90px;
+        opacity:1.0;
+    }
+    ul.skills > li {
+        list-style:square;
+        text-align:left;
+        margin-left:20%;
+    }
+    #ftimg {
+        width:18%;
+    }
+    #hdimg {
+        width:80%;
+    }
 		
 }
 
 @media screen and (max-width: 480px), screen and (max-device-width: 480px) {
     .nav {
         position:fixed;
+    }
+    .col-3-jj {
+        width:100%;
     }
 	.col-6-jj {
 		width:100%;
@@ -469,7 +586,7 @@ ul.proj > li {
         padding:30px 0 20px 0;
     }
     .portfolioMain > div {
-        height:55px;
+        height:62px;
         top:60%;
         padding:2%;
             transition:height 1s, padding 1s;
@@ -484,6 +601,15 @@ ul.proj > li {
         width:auto;
         height:100%;
     }
+    #hdimg {
+        width:220px;
+    }
+    .headbtnleft, .headbtnright {
+        height:54px;
+        padding-top:30px;
+        top:80px;
+        opacity:1.0;
+    }
     .portMenu {
         margin:3% 0;
         padding:3%;
@@ -497,12 +623,6 @@ ul.proj > li {
     }
     .logo {
         padding-top:15px;
-    }
-    .headbtnleft, .headbtnright {
-        height:65px;
-        padding-top:55px;
-        top:43px;
-        opacity:1.0;
     }
     .panel {
         width:92%;
